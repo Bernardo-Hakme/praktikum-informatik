@@ -20,6 +20,7 @@ public:
 	PKW();
 	virtual ~PKW();
 
+	//PKW spezifische methoden
 	PKW(std::string name, double maxGeschwindigkeit, double verbrauch, double tankvolumen=55.0);
 
 	virtual double dTanken(double dMenge = std::numeric_limits<double>::infinity());
