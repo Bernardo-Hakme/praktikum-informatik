@@ -17,6 +17,11 @@ Fahrzeug::Fahrzeug()
 	std::cout << "Name: kein Name" << " ID: " << p_iID << std::endl;
 }
 
+Fahrzeug::~Fahrzeug()
+{
+	std::cout << "Fahrzeug: " << p_sName << ", ID: " << p_iID << " gelöscht." << std::endl;
+}
+
 Fahrzeug::Fahrzeug(std::string name)
 : p_sName(name), p_iID(++p_iMaxID)
 {
@@ -60,9 +65,3 @@ void Fahrzeug::vSimulieren()
 	p_dGesamtZeit += dZeitDifferenz; //warum? --> TODO: code checken
 	p_dZeit = dGlobaleZeit;
 }
-
-Fahrzeug::~Fahrzeug()
-{
-	std::cout << "Fahrzeug: " << p_sName << ", ID: " << p_iID << " gelöscht." << std::endl;
-}
-
